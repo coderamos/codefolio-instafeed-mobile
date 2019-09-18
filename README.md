@@ -42,6 +42,10 @@ The page will reload if you make edits. You will also see any lint errors in the
 
 > For routing and navigation in my app.
 
+#### Image Picker
+
+> To access the device camera and photo gallery.
+
 #### React Navigation
 
 > For routing and navigation in my app.

@@ -10,9 +10,9 @@ This project was create with [React Native](https://facebook.github.io/react-nat
 
 To know the **backend** of this application, visit [codefolio-instafeed-backend](https://github.com/coderamos/codefolio-instafeed-backend).
 
-<!-- ## Avaliable Scripts
+## Avaliable Scripts
 
-### Run Project
+<!-- ### Run Project
 
 In the project directory, you can run:
 
@@ -30,25 +30,17 @@ Learn how to install `yarn` through the [official documentation](https://yarnpkg
 
 Run the app in the development mode by opening [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits. You will also see any lint errors in the console.
+The page will reload if you make edits. You will also see any lint errors in the console. -->
 
 ## Tecnologies Used
 
-#### Axios
+#### React Navigation
 
-> To make queries on external API's.
+> For routing and navigation in my app.
 
-#### Node Sass
+#### Gesture Handler
 
-> To allow me to natively compile `.scss` files.
-
-#### React Router Dom
-
-> To manage the application routing system.
-
-#### Socket.io
-
-> To communicate backend with the frontend in real-time. -->
+> For routing and navigation in my app.
 
 ## About Me
 

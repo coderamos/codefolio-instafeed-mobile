@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import api from '../services/api';
 import ImagePicker from 'react-native-image-picker';
 
 import {
@@ -16,6 +17,8 @@ class New extends Component {
   };
 
   state = {
+    preview: null,
+    image: null,
     author: '',
     place: '',
     description: '',
@@ -27,8 +30,51 @@ class New extends Component {
       {
         title: 'selecionar imagem',
       },
-      upload => {},
+      upload => {
+        if (upload.error) {
+          console.log('ERROR');
+        } else if (upload.didCancel) {
+          console.log('CANCELED');
+        } else {
+          const preview = {
+            uri: `data:image/jpeg;base64,${upload.data}`,
+          };
+
+          let prefix, extension;
+
+          if (upload.fileName) {
+            [prefix, extension] = upload.fileName.split('.');
+
+            extension =
+              extension.toLocaleLowerCase() === 'heic' ? 'jpg' : extension;
+          } else {
+            prefix = new Date().getTime();
+            extension = 'jpg';
+          }
+
+          const image = {
+            uri: upload.uri,
+            type: upload.type,
+            name: `${prefix}.${extension}`,
+          };
+          this.setState({ preview, image });
+        }
+      },
     );
+  };
+
+  handleSubmit = async () => {
+    const data = new FormData();
+
+    data.append('image', this.state.image);
+    data.append('author', this.state.author);
+    data.append('place', this.state.place);
+    data.append('description', this.state.description);
+    data.append('hashtags', this.state.hashtags);
+
+    await api.post('posts', data);
+
+    this.props.navigation.navigate('Feed');
   };
 
   render() {
@@ -39,6 +85,10 @@ class New extends Component {
           style={styles.selectButton}>
           <Text style={styles.selectButtonText}>selecionar imagem</Text>
         </TouchableOpacity>
+
+        {this.state.preview && (
+          <Image style={styles.preview} source={this.state.preview} />
+        )}
 
         <TextInput
           style={styles.input}
@@ -77,7 +127,9 @@ class New extends Component {
           onChangeText={hashtags => this.setState({ hashtags })}
         />
 
-        <TouchableOpacity onPress={() => {}} style={styles.shareButton}>
+        <TouchableOpacity
+          onPress={this.handleSubmit}
+          style={styles.shareButton}>
           <Text style={styles.shareButtonText}>compartilhar</Text>
         </TouchableOpacity>
       </View>

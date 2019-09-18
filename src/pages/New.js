@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import ImagePicker from 'react-native-image-picker';
+
 import {
   Text,
   View,
@@ -20,10 +22,21 @@ class New extends Component {
     hashtags: '',
   };
 
+  handleSelectImage = () => {
+    ImagePicker.showImagePicker(
+      {
+        title: 'selecionar imagem',
+      },
+      upload => {},
+    );
+  };
+
   render() {
     return (
       <View style={styles.container}>
-        <TouchableOpacity onPress={() => {}} style={styles.selectButton}>
+        <TouchableOpacity
+          onPress={this.handleSelectImage}
+          style={styles.selectButton}>
           <Text style={styles.selectButtonText}>selecionar imagem</Text>
         </TouchableOpacity>
 

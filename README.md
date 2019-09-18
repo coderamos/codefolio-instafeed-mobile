@@ -46,6 +46,10 @@ The page will reload if you make edits. You will also see any lint errors in the
 
 > For routing and navigation in my app.
 
+#### Socket.io
+
+> To communicate backend with the frontend in real-time.
+
 ## About Me
 
 My Github profile: https://github.com/coderamos/

@@ -1,6 +1,6 @@
 # codefolio | INSTAFEED-MOBILE
 
-<!-- ![codefolio-instafeed-demo](./public/codefolio-instafeed-demo.png) -->
+![codefolio-instafeed-mobile-demo](./src/codefolio-instafeed-mobile-demo.png)
 
 ## About This Project
 

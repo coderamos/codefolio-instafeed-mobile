@@ -1,14 +1,14 @@
-# codefolio | INSTAFEED-MOBILE
+# application | INSTAFEED - MOBILE
 
 ![codefolio-instafeed-mobile-demo](./src/codefolio-instafeed-mobile-demo.png)
 
 ## About This Project
 
-This project contains the entire mobile of the **[codefolio-instafeed-frontend](https://github.com/coderamos/codefolio-instafeed-frontend)** application. Share your setup!
+This project contains the entire mobile of the **[application-instafeed-frontend](https://github.com/coderamos/application-instafeed-frontend)** application. Share your setup!
 
 This project was create with [React Native](https://facebook.github.io/react-native/). You can learn more in the [React Native documentation](https://facebook.github.io/react-native/docs/getting-started). To learn React, check out the [React documentation](https://reactjs.org/).
 
-To know the **backend** of this application, visit [codefolio-instafeed-backend](https://github.com/coderamos/codefolio-instafeed-backend).
+To know the **backend** of this application, visit [application-instafeed-backend](https://github.com/coderamos/application-instafeed-backend).
 
 ## Avaliable Scripts
 
@@ -28,7 +28,7 @@ yarn dev
 
 Learn how to install `yarn` through the [official documentation](https://yarnpkg.com/pt-BR/docs/install).
 
-Run the app in the development mode by opening [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Run the app in the development mode by opening [http://localhost:3333](http://localhost:3333) to view it in the browser.
 
 The page will reload if you make edits. You will also see any lint errors in the console. -->
 
